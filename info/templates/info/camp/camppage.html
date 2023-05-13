@@ -1,0 +1,109 @@
+{%extends "info/camp/camp.html"%}
+{% load static%}
+{% load i18n %}
+
+{%block camp%}
+
+
+   <div class="container">
+      <h1></h1>
+
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="{% static '/images/home/quanxue.jpg'%}"
+              class="d-block w-100"
+              alt="quanxue"
+            >
+            <div class="carousel-caption d-none d-md-block">
+            <h5>123</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static '/images/home/greatwall.jpg'%}"
+              class="d-block w-100"
+              alt="greatwall"
+            >
+            <div class="carousel-caption d-none d-md-block">
+            <h5>123</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static '/images/home/nihao.jpg'%}"
+              class="d-block w-100"
+              alt="nihao"
+            >
+            <div class="carousel-caption d-none d-md-block">
+            <h5>123</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div
+        class="p-5"
+        style="width: 70%; margin: auto; border: 0px solid black"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
+          et, delectus autem possimus est repellat doloribus, odit, quam
+          voluptates suscipit architecto rem numquam! Amet repudiandae
+          voluptates consequatur, nulla excepturi illo.
+        </p>
+        <p class="m-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+          laborum saepe delectus corrupti ad nostrum odio, molestiae
+          voluptatibus unde ipsam amet. Aut placeat dolorem itaque nam optio
+          laboriosam perspiciatis consectetur.
+        </p>
+
+        <div
+          class="mx-auto text-center"
+          style="width: 200px; background-color: #eee"
+        >
+
+        </div>
+      </div>
+
+
+
+
+
+{%endblock camp%}

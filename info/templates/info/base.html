@@ -1,0 +1,62 @@
+{% load static%}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
+
+
+	{% if title %}
+		<title>Youen - {{title}}</title>
+	{% else %}
+		<title>Youen</title>
+	{% endif %}  </head>
+	<link rel = "shortcut icon" href = "{%static 'images/favicon.ico'%}" type = "image/x-icon">
+
+  <body>
+
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Association de l'Ecole chinoise Youen</a>
+	      <img src="{%static 'images/logo.png'%}" alt="" width="45" height="40">
+
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	      <div class="navbar-nav">
+	        <a class="nav-link active" aria-current="page" href="{% url 'info-home' %}">Accueil</a>
+	        <a class="nav-link" href="{% url 'info-education' %}">Éducation</a>
+  	        <a class="nav-link" href="{% url 'info-compage' %}">Comité</a>
+	        <a class="nav-link" href="{% url 'info-camppage' %}">Camp d'été</a>
+	        <a class="nav-link" href="{% url 'info-tarif' %}">S'inscrire</a>
+	        <a class="nav-link" href="{% url 'info-contact' %}">Contact</a>
+
+	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bientôt disponible</a>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+
+
+	<div class = "container">
+	{% block content %} {% endblock content%}
+    </div> 
+
+    <br /> 
+	<br />     
+	<br />       
+	<div class = "text-center">
+		<figure class="figure">
+		  <img src="{%static 'images/logo.png'%}" class="figure-img img-fluid rounded" alt="logo">
+		  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+		</figure>
+	</div>
+
+    <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+  </body>
+</html>
